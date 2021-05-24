@@ -11,20 +11,26 @@ Postgres is an open-source project under a liberal Open Source license. You can 
 
 ---
 
-The following tutorial will walk you through the following tasks:
-Download PostgreSQL and pgAdmin 4 to your own PC or environment. 
-Connect to PostgreSQL server
-Download and load the Pagila database set (based on the famous Sakila training database).
-Provide resources and a link to a Github repository detailing these steps. The data and the question sets will be included. 
+### The following tutorial will walk you through the following tasks:
+
+**1.** Download PostgreSQL and pgAdmin 4 to your own PC or environment.
+
+**2.** Connect to PostgreSQL server
+
+**3.** Download and load the Pagila database set (based on the famous Sakila training database).
+
+**4.** Provide resources and a link to a Github repository detailing these steps. The data and the question sets will be included. 
 
 ---
+### Reasoning for this tutorial and repository
 
 As I quickly worked through many different methods for teaching myself SQL I began to notice that very few of them truly embody the real-world feel of using the database querying language in the wild. I also felt a longing to understand the deeper relationships between SQL and whichever database management system (DBMS) it was being used in. This lead me to the thought that certainly there is a dataset out there somewhere that will allow me to create a real-world environment to practice in. To my joy, there was. Sakila was created to train people in MySQL and shortly afterward Pagila was created to train new users in PostgreSQL. I will go over later where I found and how I used the Pagila data. You can also find a link to it under the movie film image below. 
+
 The Pagila Database is a copy of the Sakila database and is designed more specifically for Postgre SQL learning. You can find the version of the database that I used here: Pagila Database by Devrim Gündüz. There is another Github repository that may also be helpful found here: Pagila by Robert Treat. The Pagila Database is a simulated set of tables that would mimic the operations and data of a chain of video stores. Think of Blockbuster Video circa 1990's. At first glance the use case of a video store may not seem very relevant in a post-Blockbuster world yet I assure you that this dataset still does relatively well mimicking many retail environments or environments where there is revenue, customers, and products. 
 
 ---
 
-1. Let's Get Started: Downloading PostgreSQL
+# 1. Let's Get Started: Downloading PostgreSQL
 Download PostgreSQLI downloaded the Mac installer from EDB for PostgreSQL Version 13.3 here: PostgreSQL 13.3 from EDBDownload PostgreSQL . You can do this a number of ways (all of which are featured in the link). I chose to use the interactive installer by EDB but there may be some options that are easier and in fact better. If I took the time to do this all over again I would likely choose the postgres.app instead. The postgres.app install not only allows for a simple download and install but may even have a more intuitive GUI than pgAdmin 4. nonetheless, pgAdmin works just fine and if you're into command line usage I believe all of these implementations also allow SQL on CLI. 
 I'm using Mac so I downloaded the installer from EDB. Installer will save an image to your computer that will open up a folder. 
 Click on the folder and an installer will pop up. Follow the prompts. 
@@ -36,7 +42,7 @@ Pre-install summary. Your configurations should look fairly similar. Click Nex
 
 ---
 
-2. Setting up Postgre SQL Server
+# 2. Setting up Postgre SQL Server
 There is a really nice tutorial walking you through Postgre SQL Server setup located here: Connect to a PostgreSQL Server Database. OR you can follow my quick and less thorough instructions below. 
 Two Ways to Connect on Mac (App-based or Terminal-based)
 
@@ -62,7 +68,7 @@ Click execute button to run query. Result will output below in the Data Output 
 
 ---
 
-3. Download and Load The Pagila Database
+# 3. Download and Load The Pagila Database
 There are two good githubs that I found which house the Pagila Database. I used the Pagila Database by Devrim Gündüz. It was the first one I found that had the database and clear instructions on what it was and how it works. If you are into using containerized environments he also has a tutorial for implementing the database in Docker. In this process I am assuming you already have a github account and know how to use git. If you do not then you can create a github account here and familiarize yourself with github tutorials. 
 Fork Repository
 copy the https or ssh link from the repository to clone it 
@@ -74,7 +80,7 @@ I chose to save my directory into a folder/directory that I call projects. The 
 Create a New Database in pgAdmin 4
 Right click on "Databases", click "Create" and then "Database".Name your database, I named mine "test_pagila." Click on the save button. At this point a new database should show up under the Databases heading in the left broswer. Click on the new database (in my case it is test_pagila), then click on the query tool, go into the new query editor and find the file icon in the top left of the editor and then click on that to search for your Pagila SQL files. 
 These are the steps you will take to find your Pagila SQL files. Choose the pagila-insert-data.sql file and click selectThe schema and data for the database will autofill into the query editor. Click the run icon and you should see a message that says "ALTER TABLE" below in the Data Ouput box. Now your database has been created. You can run queries and use this for whatever purposes you now desire. Happy querying. 
-4. Resources for Using Pagila
+# 4. Resources for Using Pagila
 There are many ways to train with The Pagila Database. You can spin up your own queries and use it any way you would use a real-world database or you can use question sets that quiz you on your abilities to query using realistic data and data-structures. This repository from Robert Treat is extremely helpful. It contains Pagila setup info and files as well as many links to Pagila tutorials to various tasks such as building applications from Pagila data, using REST API, performing email validation, creating reports and building rails to legacy apps.
 I have also scoured the internet to find all kinds of questions (with solutions in most cases) pertaining to Pagila and Sakila and compiled them into a group of Jupyter Notebooks. You can use these questions to test your abilities as well. Find them here:
 I also created an Entity Relationship Diagram (ERD) using Pagila. You can find my tutorial for this here: Creating a SQL Entity Relationship Diagram (ERD) and the actual ERD image for your reference below: 
