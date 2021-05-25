@@ -22,7 +22,7 @@ Postgres is an open-source project under a liberal Open Source license. You can 
 **4.** Provide resources and a link to a Github repository detailing these steps. The data and the question sets will be included. 
 
 ---
-### Reasoning for this tutorial and repository
+### Reasoning Behind This Tutorial and Repository
 
 As I quickly worked through many different methods for teaching myself SQL I began to notice that very few of them truly embody the real-world feel of using the database querying language in the wild. I also felt a longing to understand the deeper relationships between SQL and whichever database management system (DBMS) it was being used in. This lead me to the thought that certainly there is a dataset out there somewhere that will allow me to create a real-world environment to practice in. To my joy, there was. Sakila was created to train people in MySQL and shortly afterward Pagila was created to train new users in PostgreSQL. I will go over later where I found and how I used the Pagila data. You can also find a link to it under the movie film image below. 
 
@@ -78,12 +78,22 @@ Copy the url from the code button. You will insert this into the command line to
 FinderOnce terminal is open you can navigate over to the folder/directory where you would like to store the Pagila directory. Learn how to navigate through command line here: Navigate Through Command Line. You will then copy the link into the command line within the desired directory and a new directory will be created that houses all of the pagila database files that were housed in github. 
 I chose to save my directory into a folder/directory that I call projects. The ```ls``` command lists out all the files in my new Pagila directory. At this point you will now have a Pagila directory that houses the Pagila databases on your own computer. We will not pull the Pagila files into PostgreSQL server using pgAdmin 4. Before doing this I strongly recommend reading the README.md file in Devrim Gündüz's Pagila github repository. 
 Create a New Database in pgAdmin 4
-Right click on "Databases", click "Create" and then "Database".Name your database, I named mine "test_pagila." Click on the save button. At this point a new database should show up under the Databases heading in the left broswer. Click on the new database (in my case it is test_pagila), then click on the query tool, go into the new query editor and find the file icon in the top left of the editor and then click on that to search for your Pagila SQL files. 
+Right click on "Databases", click "Create" and then "Database". Name your database, I named mine "test_pagila." Click on the save button. At this point a new database should show up under the Databases heading in the left broswer. Click on the new database (in my case it is test_pagila), then click on the query tool, go into the new query editor and find the file icon in the top left of the editor and then click on that to search for your Pagila SQL files. 
 These are the steps you will take to find your Pagila SQL files. Choose the pagila-insert-data.sql file and click selectThe schema and data for the database will autofill into the query editor. Click the run icon and you should see a message that says "ALTER TABLE" below in the Data Ouput box. Now your database has been created. You can run queries and use this for whatever purposes you now desire. Happy querying. 
+
 # 4. Resources for Using Pagila
-There are many ways to train with The Pagila Database. You can spin up your own queries and use it any way you would use a real-world database or you can use question sets that quiz you on your abilities to query using realistic data and data-structures. This repository from Robert Treat is extremely helpful. It contains Pagila setup info and files as well as many links to Pagila tutorials to various tasks such as building applications from Pagila data, using REST API, performing email validation, creating reports and building rails to legacy apps.
+There are many ways to train with The Pagila Database. You can spin up your own queries and use it any way you would use a real-world database or you can use question sets that quiz you on your abilities while using realistic data and data-structures. 
 I have also scoured the internet to find all kinds of questions (with solutions in most cases) pertaining to Pagila and Sakila and compiled them into a group of Jupyter Notebooks. You can use these questions to test your abilities as well. Find them here:
 I also created an Entity Relationship Diagram (ERD) using Pagila. You can find my tutorial for this here: Creating a SQL Entity Relationship Diagram (ERD) and the actual ERD image for your reference below: 
 
-Also, I garnered much of my information to perform this task from these sites:
+### I garnered much of my information to perform this task from these sites:
 
+* [Devrim Gündüz Github](https://github.com/xzilla/pagila) Devrim is a major contributor to PostgreSQL. This is the database file I used in this tutorial. 
+
+* [The Pagila Project Page on Github](https://github.com/xzilla/pagila) I found this one after I already started creating this tutorial but this is possibly the creator of Pagila. I'm not sure. But the creator of this project seems to be a major open-source contributor to a variety of projects. 
+
+* [Connect to a PostgreSQL Database](https://www.postgresqltutorial.com/connect-to-postgresql-database/) This is the resource I used to connect to the PostgreSQL database. This site [Postgresqltutorial.com](www.postgresqltutorial.com) is also a helpful resource for other PostgreSQL information.
+ 
+* [PostgresSQL Official Site](https://www.postgresql.org/download/) This is where I downloaded PostgresSQL.
+
+* [Getting Started with PostgreSQL using Amazon RDS, CloudFormation, pgAdmin, and Python](https://programmaticponderings.com/2019/08/09/getting-started-with-postgresql-using-amazon-rds-cloudformation-pgadmin-and-python/) This is a resource I didn't use but something I want to use at some point. This tutorial combines PostgreSQL with Amazon AWS services to create a dual purpose learning experience.
