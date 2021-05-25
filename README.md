@@ -1,6 +1,11 @@
 # SQL Training with Pagila Database and PostgreSQL DBMS
 Tutorials, Data and Questions sets allowing you to download PostgreSQL and The Pagila Database for the purpose of real-world SQL simulation. In this repository you can find info to help you create an Entity Relationship Diagram (ERD) and question sets to help you train on the Pagila Dataset. 
 
+###THis repository contains: 
+
+* Tutorials in the README.md file
+* All files associated with Pagila Database
+* All files associated with creating an ERD in PostgreSQL detailing the Pagila Database. 
 ______
 # Simulating A Real-world SQL Environment
 _______
@@ -20,6 +25,8 @@ Postgres is an open-source project under a liberal Open Source license. You can 
 **3.** Download and load the Pagila database set (based on the famous Sakila training database).
 
 **4.** Provide resources and a link to a Github repository detailing these steps. The data and the question sets will be included. 
+
+**5.** Create an Entity Relationship Diagram (ERD)  also found here: [Creating an Entity Relationship Diagram for Pagila]()
 
 ---
 ### Reasoning Behind This Tutorial and Repository
@@ -86,7 +93,7 @@ There are many ways to train with The Pagila Database. You can spin up your own 
 I have also scoured the internet to find all kinds of questions (with solutions in most cases) pertaining to Pagila and Sakila and compiled them into a group of Jupyter Notebooks. You can use these questions to test your abilities as well. Find them here:
 I also created an Entity Relationship Diagram (ERD) using Pagila. You can find my tutorial for this here: Creating a SQL Entity Relationship Diagram (ERD) and the actual ERD image for your reference below: 
 
-### I garnered much of my information to perform this task from these sites:
+### I garnered much of my information to create this tutorial from these sites:
 
 * [Devrim Gündüz Github](https://github.com/xzilla/pagila) Devrim is a major contributor to PostgreSQL. This is the database file I used in this tutorial. 
 
