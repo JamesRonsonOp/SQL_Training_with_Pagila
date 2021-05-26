@@ -104,3 +104,89 @@ I also created an Entity Relationship Diagram (ERD) using Pagila. You can find m
 * [PostgresSQL Official Site](https://www.postgresql.org/download/) This is where I downloaded PostgresSQL.
 
 * [Getting Started with PostgreSQL using Amazon RDS, CloudFormation, pgAdmin, and Python](https://programmaticponderings.com/2019/08/09/getting-started-with-postgresql-using-amazon-rds-cloudformation-pgadmin-and-python/) This is a resource I didn't use but something I want to use at some point. This tutorial combines PostgreSQL with Amazon AWS services to create a dual purpose learning experience.
+
+_______________
+# Creating a SQL Entity Relationship Diagram (ERD)
+_______________
+
+### Using PostgreSQL and Pagila Database to practice creating and using ERDs
+Using pgAdmin 4 and PostgreSQL this article will demonstrate how to Create an Entity Relationship Diagram (ERD) of the Pagila Database to gain a greater understanding of the data you will be working with and to create a reference for which to work off of.
+
+There will display two separate methods for ERD creation. One is manually done and is much more time intensive but a better learning experience, the other is automatically done by pgAdmin 4 and is orders of magnitude faster and easier for those that are just looking for an ERD to reference when using the Pagila Database.
+There will be links to the necessary information, github repositories and completed ERD for your reference.
+PRE-NOTE (If you want to create an ERD fast then read this)
+
+When I initially tried to create an ERD using pgAdmin 4 I clicked on the “New ERD Project” option in the Tools dropdown and it gave me a blank grid to work off of. Because of that I actually had to manually create each table, row, and constraint in the diagram and it took me hours. The next time I attempted to create an ERD I first right-clicked on the database I wanted to work with and instead chose “Generate ERD” and initially it still appeared that I had a blank ERD to start with but when I zoomed out I noticed that an ERD was already created for me and it included all of the accurate table names, row names, constraints and relationships. In the end what had previously taken me hours to complete now only took me 30 seconds.
+That being said, I found it very useful to create my own ERD manually. It got me thinking about the process, the data types, constraints, and relationships in a way that I felt further solidified my knowledge of SQL.
+PREREQUISITES
+
+This tutorial assumes you already have PostgreSQL, pgAdmin 4, and The Pagila Database installed and set-up. If you need instructions on setting this up please visit my previous article: [Simulating A Real-world SQL Environment.](https://jamesopacich.medium.com/simulating-a-real-world-sql-environment-63784f7f37ae)
+
+**Please have pgAdmin 4 open at this point and your database ready to use.**
+
+## STEPS FOR CREATING ERD AUTOMATICALLY
+
+#### STEP 1: Generate ERD tool
+This is a Beta tool in pgAdmin 4 version 5.0.
+Generate ERD
+
+Right-click on your database. I have called my database Pagila in this case. Then find the “Generate ERD” option on the drop down list.
+This will open a new window in pgAdmin 4 located where the query window would normally be.
+
+Here a new ERD window and tab are created. This is where the ERD will be created.
+
+#### STEP 2: Save and Name Your ERD
+
+* Step 1: Click on this icon to open up the save file browser/box
+
+* Step 2: Name your ERD by typing your desired name into the end of the file path. Then click Create to save the named file. I decided to name my ERD pagila_erd3 for this exercise.
+
+* STEP 3: Export Your ERD
+The ERD is a bit difficult to zoom in and move around within pgAdmin 4 so I found it more helpful to export it to an image file for easier referencing.
+
+Click on the “Download Image” icon, it will bring up a file browser where you can name your new image file and save it to a desired file on your computer.
+
+## MANUALLY CREATING YOUR OWN ERD
+To manually create your own ERD the very first step is different.
+
+#### STEP 1: CREATE NEW ERD
+
+Instead of clicking on the database name and then selecting to generate a new database you will instead click on the “Tools” dropdown at the top of the pgAdmin app window and select “Create New ERD.”
+#### STEP 2: Save and Name Your ERD
+
+You will see now that you will have a blank ERD Window to work from.
+
+* Step 1: Click on this icon to open up the save file browser/box
+
+* Step 2: Name your ERD buy typing your desired name into the end of the file path. Then click Create to save the named file. I decided to name my ERD pagila_erd3 for this exercise.
+
+#### STEP 3: Create Your First Table
+* In this step we will create the table diagrams for the ERD. These boxes contain the table, column, constraint and key information for each table in your database.
+
+* Click the plus-sign icon to add a table.
+
+* Name your table and click on the column tab.
+
+* Click on plus sign to add column and constraints
+
+* Enter in your column names, data-types and basic constraints here and hit ok to create the table diagram. If you want to dive deeper into constraints then click on the pencil icon next to each column.
+IN CASE YOU WANT TO GET DEEPER WITH CONSTRAINTS
+
+* There is a definitions tab although this doesn’t seem to add any additional functionality.
+
+* The constraints tab does seem to add a few more parameters to add to your diagram.
+
+#### STEP 4: Creating Relationships
+* To complete your ERD you need to create relationships between tables.
+
+* To create a 1 to many relationship highlighting foreign key relationships click on the 1M icon. This will open a form for you to select columns corresponding to the tables and relationships you want to create.
+
+* To create a many-to-many relationship click the MM icon and a form will open allowing you to do the same as the previous picture.
+
+_______
+You have now created an ERD. I recommend practicing by recreating from scratch the Pagila Database ERD. You can check your work by simply creating an automated ERD as outline above. I also have corralled a bunch of question sets here that will help you fine-tune your querying skills. Find them at this Github repository.
+
+
+
+
+
